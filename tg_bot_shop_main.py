@@ -17,14 +17,14 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Your bot token from BotFather
-TOKEN = '7273051817:AAFbon4IdZxkATYa8p5-54kFliha0tBtJ5c'
+TOKEN = 'YOUR_TOKEN'
 
 # Google Sheets setup
 scope = [
 'https://www.googleapis.com/auth/spreadsheets',
 'https://www.googleapis.com/auth/drive'
 ]
-creds = ServiceAccountCredentials.from_json_keyfile_name('/Users/saintbasil/PycharmProjects/pythonProject2/arm-equipment-b896facbcdd7.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('your_credentials.json', scope)
 client = gspread.authorize(creds)
 sheet = client.open("arm bot orders").sheet1
 
